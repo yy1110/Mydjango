@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', Hello, name='hello'),
     path('index/', Testhtml, name='index'),
-    path('app2/', include('app2.urls'))
+    path('app2/', include('app2.urls')),
+    path('template/', include('templatetohtml.urls'))
 ]
