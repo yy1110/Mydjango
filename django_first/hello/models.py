@@ -4,3 +4,5 @@ from django.db import models
 class User(models.Model):
     user_name = models.CharField(max_length=16)
     user_age = models.IntegerField(default=1)
+    # False = Man
+    user_gender = models.BooleanField(default=False)

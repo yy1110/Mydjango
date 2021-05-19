@@ -5,14 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UserList</title>
+    <style type="text/css">
+    table{
+        width: 400px;
+        border-collapse: collapse;
+    }
+    td{
+        border-bottom: 1px solid #888888;padding: 5px;
+    }
+    tr:nth-child(1){
+        background-color: #7788aa;color: #ffffff;
+    }
+    tr:nth-child(even){
+        background-color: #e8e8e8;
+    }
+    </style>
+
 </head>
+
+
 <body>
     <h1>這裡是userlist</h1>
     <hr>
-    <ul>
+    <table>
+        <tr>
+            <td>name</td>
+            <td>age</td>
+            <td>gender</td>
+        </tr>
+        {% for u in sqllist %}
+            <tr>
+                <td>{{u.user_name}}</td>
+                <td>{{u.user_age}}</td>
+                <td>{{u.user_gender}}</td>
+            </tr>
+                
+        {% endfor %}
+    </table>
+    <!-- <ul>
+
         {% for u in user1 %}
             <li>{{u.user_name}}</li>
         {% endfor %}
-    </ul>
+    </ul> -->
 </body>
 </html>
